@@ -35,7 +35,7 @@ const withoutParens = course => {
 // If the code block contains a single line of code, we can write everything on one line
 // We no longer need the curly braces and the return is implicit
 // Without an arrow function, we need to explicitly type "return"
-const oneLiner = course => `I cam currently enrolled in ${course}`;
+const oneLiner = course => `I am currently enrolled in ${course}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log('As a one-liner:', oneLiner('Code 301'));
@@ -108,24 +108,23 @@ const newObject = array => ({
 
 
 
-let sum = function(a, b, c, d) {
-  return a + b + c + d;
-};
+const sum = (a, b, c, d) => `${a} + ${b} + ${c} + ${d} = ${a + b + c +d}`
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(sum(1, 2, 3, 4));
 
 
-let objectLit = function() {
-  return {
-    key1: 'value1',
-    key2: 'value2',
-    key3: 'value3',
-  };
-};
+let objectLit = array => ({
+
+  key1: array[0],
+  key2: array[1],
+  key3: array[2],
+});
+
+
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(objectLit());
+
 
 
 let sumAndProduct = function(a, b) {
