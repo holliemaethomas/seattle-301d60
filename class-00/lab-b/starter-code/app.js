@@ -35,7 +35,7 @@ const withoutParens = course => {
 // If the code block contains a single line of code, we can write everything on one line
 // We no longer need the curly braces and the return is implicit
 // Without an arrow function, we need to explicitly type "return"
-const oneLiner = course => `I cam currently enrolled in ${course}`;
+const oneLiner = course => `I am currently enrolled in ${course}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log('As a one-liner:', oneLiner('Code 301'));
@@ -76,13 +76,13 @@ const multiLiner = word => {
 // STEP 8
 // The way an object is returned is different with an arrow function, too.
 // Here is how we return an object without arrow functions
-const oldObject = function(array) {
-  return {
+const oldObject = (array) => {
+  
     firstValue: array[0],
     secondValue: array[1],
     thirdValue: array[2]
   };
-};
+
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log('Hello from the old object function', oldObject(['hi', 'hello', 'are you there?']));
@@ -108,24 +108,23 @@ const newObject = array => ({
 
 
 
-let sum = function(a, b, c, d) {
-  return a + b + c + d;
-};
+const sum = (a, b, c, d) => `${a} + ${b} + ${c} + ${d} = ${a + b + c +d}`
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(sum(1, 2, 3, 4));
 
 
-let objectLit = function() {
-  return {
-    key1: 'value1',
-    key2: 'value2',
-    key3: 'value3',
-  };
-};
+let objectLit = (array) => ({
+
+  key1: array[0],
+  key2: array[1],
+  key3: array[2],
+});
+
+
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(objectLit());
+
 
 
 let sumAndProduct = function(a, b) {
@@ -134,12 +133,14 @@ let sumAndProduct = function(a, b) {
   return [sum, product];
 };
 
+const sum = (a, b) => `${a} + ${b} = ${a + b }`
+
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(sumAndProduct(3, 9));
 
 
-let message = function(name) {
-  return `Hello, ${name}!`;
+let message = (name) => {
+ `Hello, ${name}!`
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
@@ -154,6 +155,8 @@ let Student = function(name, age, hometown) {
 
 let joe = new Student('Joe', 'Schmoe', 100);
 
+
+
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
 // console.log(joe);
@@ -163,7 +166,7 @@ let joe = new Student('Joe', 'Schmoe', 100);
 
 
 Student.prototype.greeting = function() {
-  return `Hi, my name is ${this.name}`;
+  return `Hi, my name is ${name}`;
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
@@ -199,8 +202,8 @@ Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// Nothing. This is not referenced in arrow functions
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+//nothing
 // 3. Explain why "this" is different when an arrow function is used.
-//
+//this is contextual and cannot be used with an arrow function
