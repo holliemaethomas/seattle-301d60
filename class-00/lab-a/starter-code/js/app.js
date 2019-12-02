@@ -37,7 +37,7 @@ function displayPics() {
     console.log(`${rando}`);
   }
   // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the constiable declaration from `const to `const`.
-  // the variable "rando" is declared inside a function, using "const" scopes the variable to the function. makeRandom is still makeRandom everywhere else. By moving the console.log into the function it was able to use the locally scoped variable "rando"
+  // the variable "rando" is declared inside a function, using "const" scopes the variable to the function. makeRandom is still makeRandom everywhere else. By moving the console.log into the function it was able to use the locally scoped variable "rando".
   console.log(`${viewed}`);
 
   for (let i = 0; i < 3; i++) {
